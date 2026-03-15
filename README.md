@@ -1,7 +1,5 @@
 # AsyncQueue
 
-An object that executes async jobs serially.
-
 A FIFO queue to which your application can submit async jobs. Jobs are executed serially, so order is guaranteed and the next job doesn't start until the previous one finishes.
 
 ## Usage
@@ -16,6 +14,7 @@ queue.enqueue {
 queue.enqueue {
     await sendMessage(messageTwo)
 }
+
 // sendMessage(messageOne) executes before sendMessage(messageTwo)
 ```
 
